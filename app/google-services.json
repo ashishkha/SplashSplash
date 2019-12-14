@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "868084560558",
-    "firebase_url": "https://eventmania-3ed94.firebaseio.com",
-    "project_id": "eventmania-3ed94",
-    "storage_bucket": "eventmania-3ed94.appspot.com"
+    "project_number": "128616046127",
+    "firebase_url": "https://event-mania-new.firebaseio.com",
+    "project_id": "event-mania-new",
+    "storage_bucket": "event-mania-new.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:868084560558:android:a647aa6fcce62ad045333f",
+        "mobilesdk_app_id": "1:128616046127:android:be8041a5ff2977184a30da",
         "android_client_info": {
           "package_name": "com.example.splashsplash"
         }
       },
       "oauth_client": [
         {
-          "client_id": "868084560558-d634qendhku5i5ee3uiae931hkubj9at.apps.googleusercontent.com",
+          "client_id": "128616046127-6hugi0p21tlf4r4rcmumvra5mjib0m1j.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDtNsTz9HeGqQ3Zkx7FWVklAEh3R7YCPDI"
+          "current_key": "AIzaSyAnwc-yvtruGZqAN8I6jqvlT7kP7o2FvW4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "868084560558-d634qendhku5i5ee3uiae931hkubj9at.apps.googleusercontent.com",
+              "client_id": "128616046127-6hugi0p21tlf4r4rcmumvra5mjib0m1j.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -14,11 +14,11 @@ class LogActivity : AppCompatActivity() {
         admin.setOnClickListener {
             val intent = Intent(baseContext, LoggedActivity::class.java)
             startActivity(intent)
+        }
 
-            user.setOnClickListener {
-                val intent = Intent(baseContext, useloggedActivity::class.java)
-                startActivity(intent)
-            }
+        user.setOnClickListener {
+            val intent = Intent(baseContext, useloggedActivity::class.java)
+            startActivity(intent)
         }
     }
 }

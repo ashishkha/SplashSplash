@@ -16,10 +16,17 @@ class QueryActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun submitClick() {
         if(!ediText.text.isEmpty()){
-            val database = FirebaseDatabase.getInstance()
+           /* val database = FirebaseDatabase.getInstance()
             val myRef = database.getReference(System.currentTimeMillis().toString())
 
-            myRef.setValue(ediText.text.toString())
+            myRef.setValue(ediText.text.toString())*/
+
+            val database = FirebaseDatabase.getInstance()
+            var myRef = database.getReference("Queries")
+            /*val myRefs =
+                database.getReference(System.currentTimeMillis().toString())*/
+
+            myRef.child(System.currentTimeMillis().toString()).push().setValue(ediText.text.toString())
 
             showToastMessage("Submit successfull!!")
         }else{

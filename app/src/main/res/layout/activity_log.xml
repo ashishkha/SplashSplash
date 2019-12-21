@@ -30,8 +30,18 @@
             android:paddingBottom="10dp"
             android:text="ADMIN"
 
+
             android:textSize="20sp"
             android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/userRI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="USER_reg_info"/>
+
+
 
         <TextView
             android:id="@+id/user"

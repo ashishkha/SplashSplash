@@ -20,5 +20,10 @@ class LogActivity : AppCompatActivity() {
             val intent = Intent(baseContext, UserLoggedActivity::class.java)
             startActivity(intent)
         }
+
+        userRI.setOnClickListener {
+            val intent = Intent(baseContext, StudentRegisterationInfoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

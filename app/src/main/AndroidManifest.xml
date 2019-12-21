@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".QueryActivity"></activity>
+        <activity android:name=".StudentRegisterationInfoActivity"></activity>
+        <activity android:name=".QueryActivity" />
         <activity android:name=".StudentActivity" />
         <activity android:name=".infoActivity" />
         <activity android:name=".cultActivity" />
@@ -28,7 +29,6 @@
             </intent-filter>
         </activity>
 
-
         <service
             android:name="project.async.com.event.FirebaseToken"
             android:exported="false">
@@ -36,7 +36,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>

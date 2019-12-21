@@ -11,12 +11,14 @@ import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
+import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_query.*
 
 class LoggedActivity : AppCompatActivity() {
 
     private lateinit var mAuth: FirebaseAuth
-    lateinit var username:String
-    lateinit var password:String
+    lateinit var username: String
+    lateinit var password: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,26 +27,40 @@ class LoggedActivity : AppCompatActivity() {
         login.setOnClickListener {
 
             //register
-            Log.d("TAG","fb auth:1")
+            Log.d("TAG", "fb auth:1")
             mAuth = FirebaseAuth.getInstance()
 
-            username=userNameEditText.text.toString()
-            password=passwordEdiText.text.toString()
+            username = userNameEditText.text.toString()
+            password = passwordEdiText.text.toString()
 
-            if(!username.isEmpty() && !password.isEmpty()){
-                Log.d("TAG","fb auth:3")
-                mAuth?.createUserWithEmailAndPassword(username,password)
-                    ?.addOnCompleteListener(this,object:OnCompleteListener<AuthResult>{
+            if (!username.isEmpty() && !password.isEmpty()) {
+                Log.d("TAG", "fb auth:3")
+                mAuth?.createUserWithEmailAndPassword(username, password)
+                    ?.addOnCompleteListener(this, object : OnCompleteListener<AuthResult> {
                         override fun onComplete(task: Task<AuthResult>) {
-                            Log.d("TAG","fb auth:2")
-                            if(task.isSuccessful){
-                                Log.d("TAG","fb auth:6:"+task.result)
-                                Toast.makeText(this@LoggedActivity,"Success",Toast.LENGTH_SHORT).show()
+                            Log.d("TAG", "fb auth:2")
+                            if (task.isSuccessful) {
+                                Log.d("TAG", "fb auth:6:" + task.result)
+                                Toast.makeText(this@LoggedActivity, "Success", Toast.LENGTH_SHORT)
+                                    .show()
+
+                                //add user email to database
+
+                                val database = FirebaseDatabase.getInstance()
+                                var myRef = database.getReference("Users")
+                                /*val myRefs =
+                                    database.getReference(System.currentTimeMillis().toString())*/
+
+                                myRef.child(System.currentTimeMillis().toString()).push().setValue(username)
+
+                                /*myRef.("Users").push().setValue(username)*/
+
+
                                 val user = mAuth.currentUser
                                 val intent = Intent(baseContext, LoggedActivity::class.java)
                                 startActivity(intent)
-                            }else{
-                                Log.d("TAG","fb auth:5:"+task.exception)
+                            } else {
+                                Log.d("TAG", "fb auth:5:" + task.exception)
                                 alreadYloggedIn()
                             }
                         }
@@ -58,18 +74,16 @@ class LoggedActivity : AppCompatActivity() {
         }
 
 
-
-
-
     }
 
     private fun alreadYloggedIn() {
-        mAuth.signInWithEmailAndPassword(username,password)
-            ?.addOnCompleteListener(this,object : OnCompleteListener<AuthResult>{
+        mAuth.signInWithEmailAndPassword(username, password)
+            ?.addOnCompleteListener(this, object : OnCompleteListener<AuthResult> {
                 override fun onComplete(task: Task<AuthResult>) {
-                    if(task.isSuccessful){
-                        Toast.makeText(this@LoggedActivity,"Already Logged In",Toast.LENGTH_SHORT).show()
-                    }else{
+                    if (task.isSuccessful) {
+                        Toast.makeText(this@LoggedActivity, "Already Logged In", Toast.LENGTH_SHORT)
+                            .show()
+                    } else {
 
                     }
                 }

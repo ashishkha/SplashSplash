@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CulturalActivity"></activity>
         <activity
             android:name=".StudEvent1Activity"
             android:label="@string/title_activity_stud_event1"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MastermindActivity" />
         <activity android:name=".FineartsActivity" />
         <activity android:name=".TechnokraftActivity" />

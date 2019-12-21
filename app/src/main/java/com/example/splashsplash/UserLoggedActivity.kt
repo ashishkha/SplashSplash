@@ -39,16 +39,21 @@ class UserLoggedActivity : AppCompatActivity() {
                             ?.addOnCompleteListener(this,object:OnCompleteListener<AuthResult>{
                                 override fun onComplete(task: Task<AuthResult>) {
                                     Log.d("TAG","fb auth:2")
-                                    if(task.isSuccessful){
-                                        Log.d("TAG","fb auth:6:"+task.result)
-                                        Toast.makeText(this@UserLoggedActivity,"Success",Toast.LENGTH_SHORT).show()
+                                    if(task.isSuccessful) {
+                                        Log.d("TAG", "fb auth:6:" + task.result)
+                                        Toast.makeText(this@UserLoggedActivity, "Success", Toast.LENGTH_SHORT).show()
                                         val user = mAuth.currentUser
-                                        val intent = Intent(baseContext, StudEvent1Activity::class.java)
+                                        val intent = Intent(baseContext, StudEventActivity::class.java)
                                         startActivity(intent)
-                                    }else{
+
+                                    }
+                                    else{
                                         Log.d("TAG","fb auth:5:"+task.exception)
                                         alreadYloggedIn()
                                     }
+                                    val intent = Intent(baseContext, StudEventActivity::class.java)
+                                    startActivity(intent)
+
                                 }
 
 

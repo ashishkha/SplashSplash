@@ -20,6 +20,13 @@ class StudEventActivity : AppCompatActivity() {
             val intent = Intent(this, SportsActivity::class.java)
             startActivity(intent)
         }
+
+        txtcult.setOnClickListener {
+            val intent = Intent(this, CulturalActivity::class.java)
+            startActivity(intent)
+        }
+
+
         txtMania.setOnClickListener {
             val intent = Intent(this, ManiaActivity::class.java)
             startActivity(intent)

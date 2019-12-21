@@ -32,6 +32,23 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/txtcult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:background="@drawable/round_edge"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Cultural"
+
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+        <TextView
             android:id="@+id/txtMania"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

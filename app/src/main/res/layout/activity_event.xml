@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_margin="15dp"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".LogActivity">
-
+    tools:context=".EventActivity">
 
     <LinearLayout
         android:id="@+id/ll_main_layout"
@@ -19,7 +16,7 @@
         android:padding="25dp"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/admin"
+            android:id="@+id/ADD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -28,13 +25,13 @@
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="ADMIN"
+            android:text="ADD EVENT"
 
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/user"
+            android:id="@+id/UPDATE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -44,9 +41,11 @@
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="USER"
+            android:text="UPDATE EVENT"
 
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
-    </LinearLayout>
+
+
+</RelativeLayout>

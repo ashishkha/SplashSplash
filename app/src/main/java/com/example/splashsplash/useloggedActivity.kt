@@ -25,12 +25,10 @@ class useloggedActivity : AppCompatActivity(), View.OnClickListener {
 
         query.setOnClickListener(this)
 
-        cultural.setOnClickListener {
-            val intent = Intent(baseContext, cultActivity::class.java)
-            startActivity(intent)
+
 
 
 
         }
     }
-}
+

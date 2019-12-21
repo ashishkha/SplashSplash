@@ -9,7 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".QueryActivity"></activity>
+        <activity
+            android:name=".StudEvent1Activity"
+            android:label="@string/title_activity_stud_event1"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".MastermindActivity" />
+        <activity android:name=".FineartsActivity" />
+        <activity android:name=".TechnokraftActivity" />
+        <activity android:name=".PerformingartsActivity" />
+        <activity android:name=".ManiaActivity" />
+        <activity android:name=".SportsActivity" />
+        <activity android:name=".StudEventActivity" />
+        <activity android:name=".UserLoggedActivity" />
+        <activity android:name=".UpdateEventActivity" />
+        <activity android:name=".AddEventActivity" />
+        <activity android:name=".SRActivity" />
+        <activity android:name=".NotiActivity" />
+        <activity android:name=".EventActivity" />
+        <activity android:name=".AdminlogActivity" />
+        <activity android:name=".QueryActivity" />
         <activity android:name=".StudentActivity" />
         <activity android:name=".infoActivity" />
         <activity android:name=".cultActivity" />
@@ -17,7 +35,6 @@
         <activity android:name=".LoggedActivity" />
         <activity android:name=".LogActivity" />
         <activity android:name=".admin2Activity" />
-        <activity android:name=".adminActivity" />
         <activity android:name=".Login2Activity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".StartActivity">
@@ -28,7 +45,6 @@
             </intent-filter>
         </activity>
 
-
         <service
             android:name="project.async.com.event.FirebaseToken"
             android:exported="false">
@@ -36,7 +52,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>

@@ -21,9 +21,9 @@ class LogActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        userRI.setOnClickListener {
+    /*    userRI.setOnClickListener {
             val intent = Intent(baseContext, StudentRegisterationInfoActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }

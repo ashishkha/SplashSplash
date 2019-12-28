@@ -1,20 +1,20 @@
 package com.example.splashsplash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_logged.*
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_query.*
-
-
+import kotlinx.android.synthetic.main.activity_logged.*
+import kotlinx.android.synthetic.main.activity_logged.login
+import kotlinx.android.synthetic.main.activity_user_logged.*
 
 
 class LoggedActivity : AppCompatActivity(){
@@ -36,7 +36,7 @@ class LoggedActivity : AppCompatActivity(){
         var btn_login = findViewById(R.id.login) as Button
         var btn_cancel = findViewById(R.id.cancel) as Button
 
-        login.setOnClickListener {
+        /*login.setOnClickListener {
 
             //register
             Log.d("TAG", "fb auth:1")
@@ -60,12 +60,12 @@ class LoggedActivity : AppCompatActivity(){
 
                                 val database = FirebaseDatabase.getInstance()
                                 var myRef = database.getReference("Users")
-                                /*val myRefs =
-                                    database.getReference(System.currentTimeMillis().toString())*/
+                                *//*val myRefs =
+                                    database.getReference(System.currentTimeMillis().toString())*//*
 
                                 myRef.child(System.currentTimeMillis().toString()).push().setValue(username)
 
-                                /*myRef.("Users").push().setValue(username)*/
+                                *//*myRef.("Users").push().setValue(username)*//*
 
 
                                 val user = mAuth.currentUser
@@ -112,9 +112,20 @@ class LoggedActivity : AppCompatActivity(){
                 // and verify the same
 
             }
-        }
-    }
+        }*/
 
+        login.setOnClickListener {
+            val username = et_username.text;
+            val password = et_password.text;
+            Toast.makeText(this@LoggedActivity, username, Toast.LENGTH_LONG).show()
+            val intent = Intent(baseContext, AdminlogActivity::class.java)
+            startActivity(intent)
+
+
+            // your code to validate the user_name and password combination
+            // and verify the same
+
+        }
     }
 
     private fun alreadYloggedIn() {
@@ -129,5 +140,9 @@ class LoggedActivity : AppCompatActivity(){
                 }
             })
     }
+
 }
+
+
+
 

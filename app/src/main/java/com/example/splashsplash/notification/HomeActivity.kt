@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.splashsplash.AdminlogActivity
 import com.example.splashsplash.R
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -28,10 +29,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         if(email.equals("admin") && password.equals("admin")){
-            var intent=Intent(HomeActivity@this,AdminActivity::class.java)
-            startActivity(intent)
-        }else if(email.equals("student") && password.equals("student")){
-            var intent=Intent(HomeActivity@this,StudentLoginActivity::class.java)
+            var intent=Intent(HomeActivity@this, AdminlogActivity::class.java)
             startActivity(intent)
         }else{
             showToastMessage("Invalid Credentials")

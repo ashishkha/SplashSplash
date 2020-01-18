@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".CulturalActivity"></activity>
+        <activity android:name=".Register2Activity"></activity>
+        <activity android:name=".Inform2Activity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".InformActivity" />
+        <activity android:name=".Home1Activity" />
+        <activity android:name=".CulturalActivity" />
         <activity android:name=".MastermindActivity" />
         <activity android:name=".FineartsActivity" />
         <activity android:name=".TechnokraftActivity" />
@@ -25,9 +29,7 @@
         <activity android:name=".NotiActivity" />
         <activity android:name=".EventActivity" />
         <activity android:name=".AdminlogActivity" />
-
-        <activity android:name=".StudentRegisterationInfoActivity"></activity>
-
+        <activity android:name=".StudentRegisterationInfoActivity" />
         <activity android:name=".QueryActivity" />
         <activity android:name=".StudentActivity" />
         <activity android:name=".infoActivity" />
@@ -35,7 +37,6 @@
         <activity android:name=".useloggedActivity" />
         <activity android:name=".LoggedActivity" />
         <activity android:name=".LogActivity" />
-
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

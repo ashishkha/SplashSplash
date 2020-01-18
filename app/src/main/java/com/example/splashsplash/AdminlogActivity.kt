@@ -29,8 +29,8 @@ class AdminlogActivity : AppCompatActivity() {
 
 
         }
-        txtViewStudentRegistration.setOnClickListener {
-            val intent = Intent(this, SRActivity::class.java)
+        txtViewStudentRegistrationInfo.setOnClickListener {
+            val intent = Intent(this, StudentRegisterationInfoActivity::class.java)
             startActivity(intent)
 
 

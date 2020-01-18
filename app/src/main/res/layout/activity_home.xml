@@ -7,6 +7,15 @@
     android:orientation="vertical"
     tools:context=".HomeActivity">
 
+    <LinearLayout
+        android:id="@+id/ll_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#444444"
+        android:padding="25dp"
+        android:orientation="vertical">
+
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
@@ -20,6 +29,13 @@
         android:layout_height="wrap_content"
         android:hint="password" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="25dp"
+            android:orientation="horizontal">
+
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
@@ -31,5 +47,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Send Notification" />
-
+        </LinearLayout>
+</LinearLayout>
 </LinearLayout>

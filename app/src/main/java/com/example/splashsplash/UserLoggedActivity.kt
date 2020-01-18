@@ -11,7 +11,7 @@ import android.content.Intent
                 import com.google.android.gms.tasks.OnCompleteListener
                 import com.google.android.gms.tasks.Task
                 import com.google.firebase.auth.AuthResult
-import kotlinx.android.synthetic.main.activity_logged.login
+//import kotlinx.android.synthetic.main.activity_logged.
 import kotlinx.android.synthetic.main.activity_user_logged.*
 
 class UserLoggedActivity : AppCompatActivity() {

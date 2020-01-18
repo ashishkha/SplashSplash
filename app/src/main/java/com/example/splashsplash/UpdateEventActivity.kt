@@ -11,8 +11,8 @@ class UpdateEventActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_event)
 
-        update.setOnClickListener {
+      /*  update.setOnClickListener {
             val Toast = Toast.makeText(this, "event added", Toast.LENGTH_SHORT).show()
-        }
+        }*/
     }
 }

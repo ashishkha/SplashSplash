@@ -35,12 +35,13 @@ class Register2Activity : AppCompatActivity() {
             }
         })
 
-        chk_kabaddi.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+
+       /* chk_kabaddi.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked)
                 Toast.makeText(this, "Checked "+ chk_kabaddi.text.toString(), Toast.LENGTH_SHORT).show();
             else
                 Toast.makeText(this, "Unchecked "+ chk_kabaddi.text.toString(), Toast.LENGTH_SHORT).show();
-        })
+        })*/
     }
 
     fun buttonClicked(){
@@ -53,6 +54,7 @@ class Register2Activity : AppCompatActivity() {
         else if (rb_male.isChecked)
             gender = rb_male.text.toString()
 
+/*
         var function : String = ""
         if (chk_mrmrssn.isChecked)
             function += chk_mrmrssn.text.toString() + " "
@@ -60,11 +62,12 @@ class Register2Activity : AppCompatActivity() {
             function += chk_fashionshow.text.toString() + " "
         if (chk_singing.isChecked)
             function += chk_singing.text.toString() + " "
+*/
 
         Toast.makeText(this, "name is : " + fname + " " +lname, Toast.LENGTH_SHORT).show()
         Toast.makeText(this, "gender is : " + gender , Toast.LENGTH_SHORT).show()
         Toast.makeText(this, "colname is : " + colname , Toast.LENGTH_SHORT).show()
-        Toast.makeText(this, "function interested is : " + function , Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "function interested is : " + function , Toast.LENGTH_SHORT).show()
 
     }
 

@@ -21,6 +21,5 @@ class LogActivity : AppCompatActivity() {
             val intent = Intent(baseContext, UserLoggedActivity::class.java)
             startActivity(intent)
         }
-
     }
 }

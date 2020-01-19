@@ -17,25 +17,25 @@ import kotlinx.android.synthetic.main.activity_user_logged.*
 class UserLoggedActivity : AppCompatActivity() {
 
             private lateinit var mAuth: FirebaseAuth
-            lateinit var username:String
-            lateinit var password:String
+            lateinit var usernameAssign:String
+            lateinit var passwordAssign:String
 
             override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_logged)
 
-                login.setOnClickListener {
+                btnSubmit.setOnClickListener {
 
                     //register
                     Log.d("TAG","fb auth:1")
                     mAuth = FirebaseAuth.getInstance()
 
-                    username=userNameEditText.text.toString()
-                    password=passwordEdiText.text.toString()
+                    usernameAssign=username.text.toString()
+                    passwordAssign=password.text.toString()
 
-                    if(!username.isEmpty() && !password.isEmpty()){
+                    if(!usernameAssign.isEmpty() && !passwordAssign.isEmpty()){
                         Log.d("TAG","fb auth:3")
-                        mAuth?.createUserWithEmailAndPassword(username,password)
+                        mAuth?.createUserWithEmailAndPassword(usernameAssign,passwordAssign)
                             ?.addOnCompleteListener(this,object:OnCompleteListener<AuthResult>{
                                 override fun onComplete(task: Task<AuthResult>) {
                                     Log.d("TAG","fb auth:2")
@@ -72,7 +72,7 @@ class UserLoggedActivity : AppCompatActivity() {
             }
 
             private fun alreadYloggedIn() {
-                mAuth.signInWithEmailAndPassword(username,password)
+                mAuth.signInWithEmailAndPassword(usernameAssign,passwordAssign)
                     ?.addOnCompleteListener(this,object : OnCompleteListener<AuthResult>{
                         override fun onComplete(task: Task<AuthResult>) {
                             if(task.isSuccessful){

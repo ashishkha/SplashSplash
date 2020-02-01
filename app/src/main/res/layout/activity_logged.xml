@@ -18,7 +18,15 @@
         android:background="#444444"
         android:padding="25dp"
         android:orientation="vertical">
-    <EditText
+
+        <ImageView android:src="@drawable/dovee"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal" />
+
+
+        <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +39,9 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="password"/>
+        android:hint="password"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"/>
 
         <LinearLayout
             android:layout_width="match_parent"

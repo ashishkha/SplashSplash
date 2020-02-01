@@ -8,25 +8,40 @@
     android:orientation="vertical"
     tools:context=".UserLoggedActivity">
 
+
+
     <LinearLayout
         android:id="@+id/ll_main_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:background="#444444"
+        android:background="#ffffff"
         android:padding="25dp"
         android:orientation="vertical">
+
+        <ImageView android:src="@drawable/doveee"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal" />
         <EditText
             android:id="@+id/userNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#4169E1"
+            android:textColorHint="#52afaa"
+            android:textAlignment="center"
+
             android:hint="username"/>
 
 
         <EditText
-            android:id="@+id/passwordEdiText"
+            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#4169E1"
+            android:textColorHint="#52afaa"
+            android:textAlignment="center"
             android:hint="password"/>
 
         <LinearLayout
@@ -37,17 +52,19 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/login"
+                android:id="@+id/btnsubmit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:textColor=" #4169E1"
                 android:text="login"/>
 
             <Button
-                android:id="@+id/cancel"
+                android:id="@+id/btncancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:textColor=" #4169E1"
                 android:text="cancel"/>
 
         </LinearLayout>

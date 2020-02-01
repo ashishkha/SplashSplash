@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="F Name"
+            android:text="First Name"
             android:id="@+id/lbl_fname"
             android:layout_centerVertical="true"
             />
@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="L Name"
+            android:text="Last Name"
             android:id="@+id/lbl_lname"
             android:layout_centerVertical="true"
             />
@@ -51,35 +51,143 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rl_gender"
+        android:id="@+id/rl_colname"
         android:layout_below="@+id/rl_lname"
         android:layout_marginTop="10dp">
 
-        <RelativeLayout
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="College Name"
+            android:id="@+id/lbl_colname"
+            android:layout_centerVertical="true"
+            />
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rl_colname">
+            android:id="@+id/txt_colname"
+            android:layout_toRightOf="@+id/lbl_colname"
+            />
+    </RelativeLayout>
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text=" colname"
-                android:id="@+id/lbl_colname"
-                android:layout_centerVertical="true"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_colname"
-                android:layout_toRightOf="@+id/lbl_colname"
-                />
-        </RelativeLayout>
-        <RelativeLayout
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_colad"
+        android:layout_below="@id/rl_colname"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="College Address"
+            android:id="@+id/lbl_colad"
+            android:layout_centerVertical="true"
+            />
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rl_gender"
-            android:layout_below="@+id/rl_colname"
-            android:layout_marginTop="10dp">
+            android:id="@+id/txt_colad"
+            android:layout_toRightOf="@+id/lbl_colad"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_idno"
+        android:layout_below="@id/rl_colad"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="ID No."
+            android:id="@+id/lbl_idno"
+            android:layout_centerVertical="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_idno"
+            android:layout_toRightOf="@+id/lbl_idno"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_email"
+        android:layout_below="@id/rl_idno"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:id="@+id/lbl_email"
+            android:layout_centerVertical="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_email"
+            android:layout_toRightOf="@+id/lbl_email"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_phno"
+        android:layout_below="@id/rl_email"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Phone No."
+            android:id="@+id/lbl_phno"
+            android:layout_centerVertical="true"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_phno"
+            android:layout_toRightOf="@+id/lbl_phno"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_games"
+        android:layout_below="@id/rl_phno"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Games interested in"
+            android:id="@+id/lbl_games"
+            android:layout_centerVertical="true"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_games"
+            android:layout_toRightOf="@+id/lbl_games"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_gender"
+        android:layout_below="@+id/rl_games"
+        android:layout_marginTop="10dp">
 
 
 
@@ -88,8 +196,7 @@
             android:layout_height="wrap_content"
             android:text="Gender"
             android:id="@+id/lbl_gender"
-            android:layout_centerVertical="true"
-            />
+            android:layout_centerVertical="true"/>
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,45 +215,6 @@
         </RadioGroup>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rl_games"
-        android:layout_below="@+id/rl_gender"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="games"
-            android:id="@+id/lbl_games"
-            android:layout_centerVertical="true"
-            />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/chk_kabaddi"
-            android:text="Reading"
-            android:layout_toRightOf="@+id/lbl_games"
-            />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/chk_khokho"
-            android:text="Sports"
-            android:layout_toRightOf="@+id/lbl_games"
-            android:layout_below="@+id/chk_kabaddi"
-            />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/chk_cricket"
-            android:text="Travelling"
-            android:layout_toRightOf="@+id/lbl_games"
-            android:layout_below="@+id/chk_khokho"
-            />
-    </RelativeLayout>
-
 
     <Button
         android:layout_width="match_parent"
@@ -154,10 +222,11 @@
         android:id="@+id/btn_submit"
         android:text="Submit"
 
-        android:layout_below="@+id/rl_games"
+        android:layout_below="@+id/rl_gender"
         android:layout_marginTop="10dp"/>
 
 
 </RelativeLayout>
-</RelativeLayout>
+
+
 

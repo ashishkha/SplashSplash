@@ -7,11 +7,11 @@ import java.lang.Exception
 
 class StartActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_start)
-        val background = object : Thread() {
-            override fun run() {
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_start)
+            val background = object : Thread() {
+                override fun run() {
                 try {
                     Thread.sleep(4000)
                     val intent = Intent(baseContext, LogActivity::class.java)

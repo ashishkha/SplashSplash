@@ -12,6 +12,8 @@ import kotlinx.android.synthetic.main.activity_stud_event.*
 
 class StudEventActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stud_event)
@@ -20,12 +22,6 @@ class StudEventActivity : AppCompatActivity() {
             val intent = Intent(this, SportsActivity::class.java)
             startActivity(intent)
         }
-
-        txtcult.setOnClickListener {
-            val intent = Intent(this, CulturalActivity::class.java)
-            startActivity(intent)
-        }
-
 
         txtMania.setOnClickListener {
             val intent = Intent(this, ManiaActivity::class.java)

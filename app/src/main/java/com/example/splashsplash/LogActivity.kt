@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_log.*
-import project.async.com.event.HomeActivity
+
 
 class LogActivity : AppCompatActivity() {
 
@@ -13,7 +13,7 @@ class LogActivity : AppCompatActivity() {
         setContentView(R.layout.activity_log)
 
         admin.setOnClickListener {
-            val intent = Intent(baseContext, Home1Activity::class.java)
+            val intent = Intent(baseContext, AdlogActivity::class.java)
             startActivity(intent)
         }
 

@@ -13,15 +13,17 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_logged.*
+import kotlinx.android.synthetic.main.activity_logged.password
+import kotlinx.android.synthetic.main.activity_student.*
 import kotlinx.android.synthetic.main.activity_user_logged.*
 
 
 class LoggedActivity : AppCompatActivity(){
 
 
-    private lateinit var mAuth: FirebaseAuth
-    lateinit var username: String
-    lateinit var password: String
+    //private lateinit var mAuth: FirebaseAuth
+    //lateinit var username: String
+    //lateinit var password: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,10 +32,10 @@ class LoggedActivity : AppCompatActivity(){
 
 
         // get reference to all views
-        var et_username = findViewById(R.id.username) as EditText
-        var et_password = findViewById(R.id.password) as EditText
-        var btn_login = findViewById(R.id.login) as Button
-        var btn_cancel = findViewById(R.id.cancel) as Button
+      // var et_username = findViewById(R.id.username) as EditText
+        //var et_password = findViewById(R.id.password) as EditText
+        //var btn_login = findViewById(R.id.login) as Button
+        //var btn_cancel = findViewById(R.id.cancel) as Button
 
         /*login.setOnClickListener {
 
@@ -113,31 +115,38 @@ class LoggedActivity : AppCompatActivity(){
             }
         }*/
 
-        login.setOnClickListener {
-            val username = et_username.text;
-            val password = et_password.text;
-            Toast.makeText(this@LoggedActivity, username, Toast.LENGTH_LONG).show()
-            val intent = Intent(baseContext, AdminlogActivity::class.java)
-            startActivity(intent)
+        //cancel.setOnClickListener {
+            // clearing user_name and password edit text views on reset button click
+            //et_username.setText("")
+          //  et_password.setText("")
+        //}
+
+
+        //login.setOnClickListener {
+          //  val username = et_username.text;
+            //val password = et_password.text;
+            //Toast.makeText(this@LoggedActivity, username, Toast.LENGTH_LONG).show()
+            //val intent = Intent(baseContext, AdminlogActivity::class.java)
+            //startActivity(intent)
 
 
             // your code to validate the user_name and password combination
             // and verify the same
 
-        }
-    }
+      //  }
+    //}
 
-    private fun alreadYloggedIn() {
-        mAuth.signInWithEmailAndPassword(username, password)
-            ?.addOnCompleteListener(this, object : OnCompleteListener<AuthResult> {
-                override fun onComplete(task: Task<AuthResult>) {
-                    if (task.isSuccessful) {
-                        Toast.makeText(this@LoggedActivity, "Already Logged In", Toast.LENGTH_SHORT).show()
-                    } else {
-
-                    }
-                }
-            })
+    //private fun alreadYloggedIn() {
+        //mAuth.signInWithEmailAndPassword(username, password)
+          //  ?.addOnCompleteListener(this, object : OnCompleteListener<AuthResult> {
+        //        override fun onComplete(task: Task<AuthResult>) {
+      //              if (task.isSuccessful) {
+    //                    Toast.makeText(this@LoggedActivity, "Already Logged In", Toast.LENGTH_SHORT).show()
+  //                  } else {
+//
+     //               }
+   //             }
+ //           })
     }
 
 }

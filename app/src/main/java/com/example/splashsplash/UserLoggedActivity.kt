@@ -4,7 +4,7 @@ import android.content.Intent
                 import androidx.appcompat.app.AppCompatActivity
                 import android.os.Bundle
                 import kotlinx.android.synthetic.main.activity_log.*
-                import kotlinx.android.synthetic.main.activity_logged.*
+                //*import kotlinx.android.synthetic.main.activity_logged.*
                 import com.google.firebase.auth.FirebaseAuth
                 import android.util.Log
                 import android.widget.Toast
@@ -22,16 +22,23 @@ class UserLoggedActivity : AppCompatActivity() {
 
             override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
-                setContentView(R.layout.activity_logged)
+                setContentView(R.layout.activity_user_logged)
 
-                btnSubmit.setOnClickListener {
+                btncancel.setOnClickListener {
+                    // clearing user_name and password edit text views on reset button click
+                    userNameEditText.setText("")
+                    passwordEditText.setText("")
+                }
+
+
+                btnsubmit.setOnClickListener {
 
                     //register
                     Log.d("TAG","fb auth:1")
                     mAuth = FirebaseAuth.getInstance()
 
-                    usernameAssign=username.text.toString()
-                    passwordAssign=password.text.toString()
+                    usernameAssign=userNameEditText.text.toString()
+                    passwordAssign=passwordEditText.text.toString()
 
                     if(!usernameAssign.isEmpty() && !passwordAssign.isEmpty()){
                         Log.d("TAG","fb auth:3")
@@ -58,8 +65,8 @@ class UserLoggedActivity : AppCompatActivity() {
 
 
 
-                            }
-                            )
+                            })
+
                     }
 
 

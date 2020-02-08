@@ -1,6 +1,7 @@
 package com.example.splashsplash
 
 import android.content.Intent
+
                 import androidx.appcompat.app.AppCompatActivity
                 import android.os.Bundle
                 import kotlinx.android.synthetic.main.activity_log.*
@@ -50,7 +51,7 @@ class UserLoggedActivity : AppCompatActivity() {
                                         Log.d("TAG", "fb auth:6:" + task.result)
                                         Toast.makeText(this@UserLoggedActivity, "Success", Toast.LENGTH_SHORT).show()
                                         val user = mAuth.currentUser
-                                        val intent = Intent(baseContext, StudEventActivity::class.java)
+                                        val intent = Intent(baseContext, NavActivity::class.java)
                                         startActivity(intent)
 
                                     }
@@ -58,7 +59,7 @@ class UserLoggedActivity : AppCompatActivity() {
                                         Log.d("TAG","fb auth:5:"+task.exception)
                                         alreadYloggedIn()
                                     }
-                                    val intent = Intent(baseContext, StudEventActivity::class.java)
+                                    val intent = Intent(baseContext, NavActivity::class.java)
                                     startActivity(intent)
 
                                 }

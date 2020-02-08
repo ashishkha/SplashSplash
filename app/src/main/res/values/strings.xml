@@ -18,7 +18,10 @@
     <string name="sports_message">this is sports
          In this we play a lots of game
          there are lots of games that</string>
+    <string name="title_activity_nav">NavActivity</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

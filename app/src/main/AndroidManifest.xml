@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdlogActivity"></activity>
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".AdlogActivity" />
         <activity android:name=".Register7Activity" />
         <activity android:name=".Inform7Activity" />
         <activity android:name=".Register6Activity" />
@@ -32,7 +33,7 @@
         <activity android:name=".PerformingartsActivity" />
         <activity android:name=".ManiaActivity" />
         <activity android:name=".SportsActivity" />
-        <activity android:name=".StudEventActivity" />
+        <activity android:name=".NavActivity" />
         <activity android:name=".UserLoggedActivity" />
         <activity android:name=".UpdateEventActivity" />
         <activity android:name=".AddEventActivity" />

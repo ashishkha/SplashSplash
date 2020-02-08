@@ -18,7 +18,7 @@ class StudEventActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stud_event)
 
-        txtsports.setOnClickListener {
+         txtsports.setOnClickListener {
             val intent = Intent(this, SportsActivity::class.java)
             startActivity(intent)
         }
@@ -52,3 +52,8 @@ class StudEventActivity : AppCompatActivity() {
     }
 
 }
+
+
+
+
+

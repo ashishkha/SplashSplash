@@ -11,10 +11,11 @@
         android:id="@+id/img"
         android:layout_width="300dp"
         android:layout_height="650dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="51dp"
-        android:layout_marginBottom="44dp"
         android:scaleType="center"
         android:src="@drawable/logoo" />
 

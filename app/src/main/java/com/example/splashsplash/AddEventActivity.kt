@@ -13,7 +13,7 @@ class AddEventActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add_event)
 
         add.setOnClickListener {
-            val Toast = Toast.makeText(this, "event added", Toast.LENGTH_SHORT).show()
+             Toast.makeText(this, "event added", Toast.LENGTH_SHORT).show()
         }
     }
 }

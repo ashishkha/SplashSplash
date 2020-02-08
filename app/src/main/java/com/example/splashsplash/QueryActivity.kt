@@ -35,7 +35,7 @@ class QueryActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showToastMessage(message: String) {
-        Toast.makeText(QueryActivity@this,message,Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
